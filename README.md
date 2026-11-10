@@ -30,6 +30,51 @@ Before running this project, ensure you have:
 ## Installation & Setup
 
 1.  **Clone the repository:**
-    ```bash
     git clone https://github.com/Zaid2694/Survey-Login-singup-ConnectDatabse.git
     cd Survey-Login-singup-ConnectDatabse
+2.Install dependencies:
+bash
+npm install
+
+3.Firebase Configuration:
+
+Open src/App.js and replace the firebaseConfig object with your own Firebase project credentials.
+
+Ensure you have enabled Email/Password and Google sign-in methods in the Firebase Console.
+
+Enable Realtime Database and set the rules to read: true, write: true (for testing purposes only).
+
+
+4.Run the app
+bush
+npm start
+
+Usage
+Sign Up: Create a new account using email/password. Check your email for the verification link.
+
+Login: After verification, log in with your credentials. (Note: Unverified users will be prompted to verify their email first).
+
+Survey: Once logged in, fill out the survey details and answer the questions.
+
+Data Storage: Upon submission, your responses are saved to the Firebase Realtime Database under the survey/ node.
+
+Project Structure
+src/App.js: Main component, handles Firebase initialization and auth logic.
+
+src/Components/Resigter.js: Signup form component.
+
+src/Components/Login.js: Login form component.
+
+src/Components/Container.js: Manages the survey flow and database submission.
+
+src/Components/Details.js & Question.js: Survey form components.
+
+Deployment
+(Agar aapne deploy kiya hai)
+This app can be deployed using Firebase Hosting or any other static hosting service.
+
+Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+
+    
